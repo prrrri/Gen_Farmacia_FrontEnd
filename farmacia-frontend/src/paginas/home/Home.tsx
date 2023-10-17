@@ -1,6 +1,8 @@
 import React from "react";
 import homeLogo from "../../assets/logo.png";
 import "./Home.css";
+import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos";
+import ModalProduto from "../../components/produtos/modalProduto/ModalProduto";
 
 function Home() {
   return (
@@ -9,9 +11,10 @@ function Home() {
         <div className="container grid grid-cols-2 text-white">
           <div className="flex flex-col gap-4 items-center justify-center py-4">
             <h2 className="text-5xl font-bold">Seja bem vinde!</h2>
-            <p className="text-xl">Farmacinha</p>
+            <p className="text-xl">Cadastre aqui seus produtinhos</p>
 
             <div className="flex justify-around gap-4">
+              <ModalProduto />
               <button className="rounded bg-white text-blue-800 py-2 px-4">
                 Ver produtos
               </button>
@@ -23,6 +26,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <ListaProdutos />
     </>
   );
 }
